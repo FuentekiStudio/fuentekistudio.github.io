@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuenteki Studio - Video Game Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <header class="flex flex-col justify-center items-center text-center h-screen bg-cover bg-center bg-black bg-opacity-60 px-6" style="background-image: url('https://via.placeholder.com/1500');">
+        <h1 class="text-6xl font-extrabold mb-6 drop-shadow-lg">Fuenteki Studio</h1>
+        <p class="text-lg max-w-2xl leading-relaxed opacity-90">Argentinian video game development studio using Godot Engine.</p>
+        <a href="#contact" class="mt-8 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 scroll-smooth">Contact Us</a>
+    </header>
+
+    <section class="py-20 px-6 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto text-center">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <h3 class="text-2xl font-bold mb-3">2D/3D Games</h3>
+            <p class="text-gray-300">We create interactive experiences in multiple dimensions using Godot.</p>
+        </div>
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <h3 class="text-2xl font-bold mb-3">Featured Projects</h3>
+            <p class="text-gray-300">"Snowballing" selected for national exhibition.</p>
+        </div>
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transition">
+            <h3 class="text-2xl font-bold mb-3">Multiplatform</h3>
+            <p class="text-gray-300">Development for all modern platforms.</p>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 bg-gray-900 text-center">
+        <h2 class="text-3xl font-bold mb-8">Meet Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <img src="nicolas_icon.png" alt="Team Member 1" class="w-32 h-32 mx-auto rounded-full mb-4">
+                <h3 class="text-xl font-semibold">Nicolas Rodriguez</h3>
+                <p class="text-gray-400">Game Director</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="https://www.linkedin.com/in/rodriguez-nic/" class="text-blue-400">🔗 LinkedIn</a>
+                    <a href="#" class="text-blue-500">🐦 Twitter</a>
+                </div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <img src="santiago_icon.png" alt="Team Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
+                <h3 class="text-xl font-semibold">Santiago Sanchez</h3>
+                <p class="text-gray-400">Game Programmer</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="https://www.linkedin.com/in/santiago-sanchez-corallo-6b81781b1/" class="text-blue-400">🔗 LinkedIn</a>
+                    <a href="#" class="text-blue-500">🐦 Twitter</a>
+                </div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <img src="demian_icon.png" alt="Team Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
+                <h3 class="text-xl font-semibold">Demian Lozano</h3>
+                <p class="text-gray-400">Game Programmer</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="https://www.linkedin.com/in/demian-lozano-riedel-8992a925a/" class="text-blue-400">🔗 LinkedIn</a>
+                    <a href="#" class="text-blue-500">🐦 Twitter</a>
+                </div>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <img src="candela_icon.png" alt="Team Member 4" class="w-32 h-32 mx-auto rounded-full mb-4">
+                <h3 class="text-xl font-semibold">Candela Irigoy</h3>
+                <p class="text-gray-400">Role</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="#" class="text-blue-400">🔗 LinkedIn</a>
+                    <a href="#" class="text-blue-500">🐦 Twitter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gray-800 py-16 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">Contact Us</h2>
+        <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="max-w-lg mx-auto bg-gray-900 p-6 rounded-lg">
+            <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white">
+            <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white">
+            <textarea name="message" placeholder="Your Message" required class="w-full p-3 mb-4 rounded-lg bg-gray-700 text-white"></textarea>
+            <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg font-bold transition">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <footer class="bg-gray-800 py-8 text-center">
+        <p class="text-gray-400">© 2025 Fuenteki Studio - Argentinian video game development studio</p>
+    </footer>
+    
+    <script>
+        document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
