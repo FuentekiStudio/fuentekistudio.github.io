@@ -1,3 +1,5 @@
+CAROUSEL FINAL ITERATION BACKUP
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,17 +37,17 @@
             align-items: center;
         }
         .carousel-item {
-        position: absolute;
-        width: 33%; /* Adjust width for responsiveness */
-        max-width: 33vh; /* Limit maximum width */
-        height: auto; /* Allow height to adjust based on content */
-        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        visibility: hidden; /* Hide all slides by default */
-        opacity: 0; /* Make hidden slides fully transparent */
-        display: flex; /* Ensure flex layout is always applied */
-        flex-direction: column; /* Stack image and footer vertically */
-        align-items: center;
-        justify-content: flex-start; /* Align content to the top */
+            position: absolute;
+            width: 33%; /* Adjust width for responsiveness */
+            max-width: 33vh; /* Limit maximum width */
+            height: 100%; /* Fill the container height */
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            visibility: hidden; /* Hide all slides by default */
+            opacity: 0; /* Make hidden slides fully transparent */
+            display: flex; /* Ensure flex layout is always applied */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         .center {
             transform: translateX(-50%); /* Align current item to the right of the center */
@@ -69,26 +71,11 @@
             left: 50%; /* Align to the center and move right */
         }
         .carousel-item img {
-        width: 100%; /* Ensure the image fills the container width */
-        aspect-ratio: 16 / 9; /* Enforce a 16:9 aspect ratio */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
-        border-top-left-radius: 0.5rem; /* Rounded corners for the top */
-        border-top-right-radius: 0.5rem; /* Rounded corners for the top */
+            width: 100%;
+            height: 100%; /* Fill the item height */
+            object-fit: cover; /* Ensure the image covers the area */
+            border-radius: 0.5rem; /* Rounded corners */
         }
-
-    .carousel-item-footer {
-        background-color: #4A5568; /* Gray color for the footer */
-        color: white; /* Text color */
-        padding: 0.5rem 1rem; /* Padding inside the footer */
-        width: 100%; /* Full width of the carousel item */
-        text-align: center; /* Center the text */
-        border-bottom-left-radius: 0.5rem; /* Match the image's border radius */
-        border-bottom-right-radius: 0.5rem; /* Match the image's border radius */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        }
-
     </style>
     
 
@@ -97,7 +84,7 @@
 <body class="bg-gray-900 text-white font-sans">
     <!-- Welcome -->
     <header id="welcome" class="flex flex-col justify-center items-center text-center h-screen bg-cover bg-center bg-black bg-opacity-60 px-6" style="background-image: url('https://via.placeholder.com/1500');">
-        <img src="images\fuenteki.png" alt="Fuenteki Studio Logo" class="mb-6 w-48">
+        <img src="fuenteki.png" alt="Fuenteki Studio Logo" class="mb-6 w-48">
         <h1 class="text-6xl font-extrabold mb-6 drop-shadow-lg">Fuenteki Studio</h1>
         <p class="text-lg max-w-2xl leading-relaxed opacity-90">Argentinian video game development studio using Godot Engine.</p>
         <a href="#contact" class="mt-8 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105 scroll-smooth">Contact Us</a>
@@ -125,47 +112,45 @@
         <h2 class="text-3xl font-bold mb-8">Our Projects</h2> <!-- Title -->
         <div class="carousel-container relative mx-auto w-[70%]">
             <!-- Buttons with higher z-index -->
-            <button onclick="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 px-4 py-2 rounded-full z-20" aria-label="Previous Slide">❮</button>
+            <button onclick="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 px-4 py-2 rounded-full z-20">❮</button>
             <div id="carousel" class="carousel h-full">
                 <!-- Articles 1 -->
                 <div class="carousel-item center" data-index="0">
-                    <a href="https://play.expoeva.com/juegos-competencia/snowballing-3/" target="_blank">
-                        <img src="images\content\snowballing_eva.png" alt="Project 1">
-                        <div class="carousel-item-footer">
-                            <h3 class="text-xl font-semibold">Snowballing at EVA 2024</h3>
-                        </div>
+                    <a href="#" target="_blank">
+                        <img src="nicolas_icon.png" alt="Project 1" class="rounded-lg shadow-lg w-full h-full object-cover">
+                        <h3 class="text-xl font-semibold mt-4">Nicolas</h3>
                     </a>
                 </div>
                 <!-- Articles 2 -->
                 <div class="carousel-item right" data-index="1">
-                    <a href="https://fuenteki.itch.io/snowballing" target="_blank">
-                        <img src="images\content\snowballing_itch.png" alt="Project 2">
-                        <div class="carousel-item-footer">
-                            <h3 class="text-xl font-semibold">Play Snowballing Now</h3>
-                        </div>
+                    <a href="#" target="_blank">
+                        <img src="demian_icon.png" alt="Project 2" class="rounded-lg shadow-lg w-full h-full object-cover">
+                        <h3 class="text-xl font-semibold mt-4">Demian</h3>
                     </a>
                 </div>
                 <!-- Articles 3 -->
                 <div class="carousel-item left" data-index="2">
-                    <a href="https://www.linkedin.com/company/105137965/admin/dashboard/" target="_blank">
-                        <img src="images/fuenteki.png" alt="Project 4">
-                        <div class="carousel-item-footer">
-                            <h3 class="text-xl font-semibold">Follow Us on LinkedIN</h3>
-                        </div>
+                    <a href="#" target="_blank">
+                        <img src="santiago_icon.png" alt="Project 3" class="rounded-lg shadow-lg w-full h-full object-cover">
+                        <h3 class="text-xl font-semibold mt-4">Santiago</h3>
                     </a>
                 </div>
                 <!-- Articles 4 -->
                 <div class="carousel-item left" data-index="3">
-                    <a href="https://fuenteki.itch.io/the-mechamorphosis" target="_blank">
-                        <img src="images\content\mechamorphosis_itch.png" alt="Project 3">
-                        <div class="carousel-item-footer">
-                            <h3 class="text-xl font-semibold">Play The Mechamorphosis Now</h3>
-                        </div>
+                    <a href="#" target="_blank">
+                        <img src="candela_icon.png" alt="Project 4" class="rounded-lg shadow-lg w-full h-full object-cover">
+                        <h3 class="text-xl font-semibold mt-4">Candela</h3>
                     </a>
                 </div>
-                
+                <!-- Articles 5 -->
+                <div class="carousel-item left" data-index="3">
+                    <a href="#" target="_blank">
+                        <img src="fuenteki.png" alt="Project 4" class="rounded-lg shadow-lg w-full h-full object-cover">
+                        <h3 class="text-xl font-semibold mt-4">Candela</h3>
+                    </a>
+                </div>
             </div>
-            <button onclick="nextSlide()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 px-4 py-2 rounded-full z-20" aria-label="Next Slide">❯</button>
+            <button onclick="nextSlide()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 px-4 py-2 rounded-full z-20">❯</button>
         </div>
     </section>
     
@@ -175,7 +160,7 @@
         <h2 class="text-3xl font-bold mb-8">Meet Our Team</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <img src="images\team\nicolas_icon.png" alt="Team Member 1" class="w-32 h-32 mx-auto rounded-full mb-4">
+                <img src="nicolas_icon.png" alt="Team Member 1" class="w-32 h-32 mx-auto rounded-full mb-4">
                 <h3 class="text-xl font-semibold">Nicolas Rodriguez</h3>
                 <p class="text-gray-400">Game Director</p>
                 <div class="flex justify-center space-x-4 mt-4">
@@ -183,7 +168,7 @@
                 </div>
             </div>
             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <img src="images\team\santiago_icon.png" alt="Team Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
+                <img src="santiago_icon.png" alt="Team Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
                 <h3 class="text-xl font-semibold">Santiago Sanchez</h3>
                 <p class="text-gray-400">Game Programmer</p>
                 <div class="flex justify-center space-x-4 mt-4">
@@ -191,7 +176,7 @@
                 </div>
             </div>
             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <img src="images\team\demian_icon.png" alt="Team Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
+                <img src="demian_icon.png" alt="Team Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
                 <h3 class="text-xl font-semibold">Demian Lozano</h3>
                 <p class="text-gray-400">Game Programmer</p>
                 <div class="flex justify-center space-x-4 mt-4">
@@ -199,7 +184,7 @@
                 </div>
             </div>
             <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <img src="images\team\candela_icon.png" alt="Team Member 4" class="w-32 h-32 mx-auto rounded-full mb-4">
+                <img src="candela_icon.png" alt="Team Member 4" class="w-32 h-32 mx-auto rounded-full mb-4">
                 <h3 class="text-xl font-semibold">Candela Irigoy</h3>
                 <p class="text-gray-400">Concept & 2D Artist</p>
                 <div class="flex justify-center space-x-4 mt-4">
